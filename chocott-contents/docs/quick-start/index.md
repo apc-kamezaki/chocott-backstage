@@ -27,7 +27,7 @@ export GITHUB_CREDENTIAL_FILE="/<put your folder name>/github-credentials.yaml"
 export GITHUB_ORG="<organization名>"
 ```
 
-パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんので上記の環境変数の設定は不要です。コンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.gitHubOrgの項目をコメントアウトし、また`auth.providers.github.development.signIn.resolvers`の`allMatchersAsGuest`を有効にしてください。
+パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんので上記の環境変数の設定は不要です。コンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.githubOrgの項目をコメントアウトし、また`auth.providers.github.development.signIn.resolvers`の`allMatchersAsGuest`を有効にしてください。
 
 ```yaml
 auth:
@@ -79,7 +79,7 @@ git clone https://github.com/ap-communications/chocott-backstage.git --depth 1
 ### docker composeによる実行
 
 ```shell
-cd chokott-contents/deploy/docker-compose
+cd chocott-contents/deploy/docker-compose
 docker compose up -d
 
 ```

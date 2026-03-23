@@ -6,7 +6,7 @@
 
 chocott-backstageのシステム構成を以下に示します。
 
-![sytem-overview](./system-overview.drawio.png)
+![system-overview](./system-overview.drawio.png)
 
 ## 始め方
 
@@ -32,5 +32,5 @@ chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご
 以下の部分は独自に追加しております。
 
 - ${TOP}/LICENSE
-- $(TOP)/.github
-- $(TOP)/chocott-contenets
+- ${TOP}/.github
+- ${TOP}/chocott-contents
