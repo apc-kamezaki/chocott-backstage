@@ -18,7 +18,7 @@
 
 ### テンプレート用カタログ情報
 
-テンプレート情報も通常のソフトウェアコンポーネントのカタログと同様にカタログファイルでその内容を定義します。（ [カタログファイル](https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml)
+テンプレート情報も通常のソフトウェアコンポーネントのカタログと同様にカタログファイルでその内容を定義します。（[カタログファイル](https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml)）
 
 こちらのファイルで入力項目と、テンプレート作成時に実行する内容、テンプレート作成後Backstage側に反映する内容を記載します。
 
