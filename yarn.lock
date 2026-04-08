@@ -3915,9 +3915,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-scaffolder-backend@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "@backstage/plugin-scaffolder-backend@npm:3.2.0"
+"@backstage/plugin-scaffolder-backend@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@backstage/plugin-scaffolder-backend@npm:3.3.0"
   dependencies:
     "@backstage/backend-openapi-utils": "npm:^0.6.7"
     "@backstage/backend-plugin-api": "npm:^1.8.0"
@@ -3930,7 +3930,7 @@ __metadata:
     "@backstage/plugin-permission-common": "npm:^0.9.7"
     "@backstage/plugin-permission-node": "npm:^0.10.11"
     "@backstage/plugin-scaffolder-common": "npm:^2.0.0"
-    "@backstage/plugin-scaffolder-node": "npm:^0.13.0"
+    "@backstage/plugin-scaffolder-node": "npm:^0.13.1"
     "@backstage/types": "npm:^1.2.2"
     "@opentelemetry/api": "npm:^1.9.0"
     "@types/luxon": "npm:^3.0.0"
@@ -3955,7 +3955,7 @@ __metadata:
     zen-observable: "npm:^0.10.0"
     zod: "npm:^3.25.76 || ^4.0.0"
     zod-to-json-schema: "npm:^3.25.1"
-  checksum: 10/2fe9c9fa7dd9c40aa6abba9d73029250b7f3716328c2e4599e995c0c69ec4e5d47e7c177074ea1ab7078e5970a2afe228576f16fd10eb8fc6e606ae43c3b6f88
+  checksum: 10/8ff78433827e431dbfd8cd6192d0531b41bae62a62d75085e050653e434ffc4e5f30316701a02e52e1c545289f9b06f29e19676de914641514b6c4e96426aa8f
   languageName: node
   linkType: hard
 
@@ -3978,15 +3978,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-scaffolder-node@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "@backstage/plugin-scaffolder-node@npm:0.13.0"
+"@backstage/plugin-scaffolder-node@npm:^0.13.0, @backstage/plugin-scaffolder-node@npm:^0.13.1":
+  version: 0.13.1
+  resolution: "@backstage/plugin-scaffolder-node@npm:0.13.1"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.8.0"
     "@backstage/catalog-model": "npm:^1.7.7"
     "@backstage/errors": "npm:^1.2.7"
     "@backstage/integration": "npm:^2.0.0"
     "@backstage/plugin-permission-common": "npm:^0.9.7"
+    "@backstage/plugin-permission-node": "npm:^0.10.11"
     "@backstage/plugin-scaffolder-common": "npm:^2.0.0"
     "@backstage/types": "npm:^1.2.2"
     "@isomorphic-git/pgp-plugin": "npm:^0.0.7"
@@ -4007,7 +4008,7 @@ __metadata:
   peerDependenciesMeta:
     "@backstage/backend-test-utils":
       optional: true
-  checksum: 10/9da68797a05a8f47713dd2ec11317a10257b562fe44adf50019c7b25b416f3cc13ed201a480e88947a891cd8c092f94c66e385bcd337855f18a14a0ba0ea750b
+  checksum: 10/867e292eeec370c58b23a9890279f5ab1f7afeab0b65a1c4ebb5f3651d78b1eb5c66c89571ee80f84e4c22cbe7db3c13a352cc583753c5533c6666a8a0b628cd
   languageName: node
   linkType: hard
 
@@ -15471,7 +15472,7 @@ __metadata:
     "@backstage/plugin-permission-common": "npm:^0.9.7"
     "@backstage/plugin-permission-node": "npm:^0.10.11"
     "@backstage/plugin-proxy-backend": "npm:^0.6.11"
-    "@backstage/plugin-scaffolder-backend": "npm:^3.2.0"
+    "@backstage/plugin-scaffolder-backend": "npm:^3.3.0"
     "@backstage/plugin-scaffolder-backend-module-github": "npm:^0.9.7"
     "@backstage/plugin-scaffolder-backend-module-notifications": "npm:^0.1.20"
     "@backstage/plugin-search-backend": "npm:^2.1.0"
