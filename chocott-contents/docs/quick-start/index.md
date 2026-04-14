@@ -1,94 +1,26 @@
 # Quick start
 
-## 連携先GitHubへの登録
+chocott-backstageを利用するには、GitHubアカウントにGitHub Appを登録する必要があります。
 
-### GitHub Appの登録
+GitHub AppはOrganization（組織）アカウントまたはパーソナルアカウント（個人のGitHubアカウント）のどちらにも登録できます。利用形態に応じて、以下のいずれかの手順を参照してください。
 
-GitHub AppをGitHubアカウントに登録する必要があります。 [Authenticationのドキュメント](../authentication/index.md) を参考にAppを登録し、Client IdとClient Secret、Secretファイルを作成してください。
+## Organizationアカウントで利用する場合
 
-```shell
-export AUTH_GITHUB_CLIENT_ID="<Client IDの文字列>"
-export AUTH_GITHUB_CLIENT_SECRET="<Secretの文字列>"
-```
+OrganizationのメンバーでBackstageを共有利用する場合は、OrganizationアカウントにGitHub Appを登録します。
 
-続けて、Backend向けのGitHub Integrationを実現するため、GitHub App Private Keyを作成します。
-[Integratonのドキュメント](../integration/index.md) を参考に、Credential fileを作成します。
-作成したファイルパスを GITHUB_CREDENTIAL_FILE という環境変数に設定します。
+- Organizationのユーザー・チーム情報をBackstageに取り込むことができます
+- サインインできるのはOrganizationのメンバーのみとなります
 
-```bash
-export GITHUB_CREDENTIAL_FILE="/<put your folder name>/github-credentials.yaml"
+→ [Organizationアカウントで利用する場合の手順](./organization.md)
 
-```
+## パーソナルアカウントで利用する場合
 
-組織アカウントにGitHub Appを登録した場合には、その組織のユーザー・チーム情報をBackstageに取り込むことができます。
-以下のようにGitHub組織名を環境変数に設定してください。
+個人で検証・学習目的で利用する場合は、パーソナルアカウントにGitHub Appを登録します。
 
-```shell
-export GITHUB_ORG="<organization名>"
-```
+- 設定ファイルの編集が必要です
+- GitHubアカウントを持っているすべての方がサインイン可能となります（ローカル環境での利用を想定）
 
-パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんので上記の環境変数の設定は不要です。コンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.githubOrgの項目をコメントアウトし、また`auth.providers.github.development.signIn.resolvers`の`allMatchersAsGuest`を有効にしてください。
-
-```yaml
-auth:
-  environment: development
-  providers:
-    github:
-      development:
-        clientId: ${AUTH_GITHUB_CLIENT_ID}
-        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
-        signIn:
-          resolvers:
-            - resolver: usernameMatchingUserEntityName
-            # 個人アカウントにGitHubAppを作成した場合は以下の部分を有効にしてください
-            - resolver: allMatchersAsGuest # ここを有効にする
-
-
-catalog:
-  # 個人アカウントにGitHub Appを作成した場合はproviders.githubOrgの項目をコメントアウトしてください
-  providers:
-    # 下記をコメントアウト
-    # githubOrg:
-    #   id: 'github-local'
-    #   orgs:
-    #   - ${GITHUB_ORG}
-
-```
-
-この場合は、GitHubアカウントを持っているすべての方がBackstageにサインイン可能となりますのでご利用の際はご注意ください。
-
-
-## すぐに動かしたい方
-
-必要なこと
-
-- コードのclone
-- 連携するGitHubアカウントへのGitHub Appの登録
-- 環境変数の定義
-- docker composeによる実行
-
-### コードのclone
-
-[本リポジトリ](https://github.com/ap-communications/chocott-backstage)を clone してください
-
-```
-git clone https://github.com/ap-communications/chocott-backstage.git --depth 1
-
-```
-
-### docker composeによる実行
-
-```shell
-cd chocott-contents/deploy/docker-compose
-docker compose up -d
-
-```
-
-上記でアプリケーションが起動します。GitHubのほうからユーザー情報等を取得する時間が必要となるため、起動後少し（10秒程度）お待ちください。
-その後、 http://localhost:7007/ でアクセスできます。GitHubアカウントでサインインできます。
-
-アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md) をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
-
+→ [パーソナルアカウントで利用する場合の手順](./personal.md)
 
 ## ご自身でソースコードも修正してみたい方
 
@@ -102,15 +34,15 @@ docker compose up -d
 
 nodeやyarnなどいくつかのコマンドが必要です。詳しくは [Backstage公式ドキュメントのGetting Started](https://backstage.io/docs/getting-started/#prerequisites)をご確認ください。
 
-なお、chocott-backstageでは Node 18を利用して実装しています。
+なお、chocott-backstageではNode 18を利用して実装しています。
 
-また、TechDocsを表示するために mkdocs というツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
+また、TechDocsを表示するためにmkdocsというツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
 
 
 ### ローカル向けコンフィグレーションファイルの用意
 
 リポジトリのトップフォルダにある、テンプレートファイルをもとにローカル向けコンフィグレーションを作成します。
-なお、初期状態ではデータベースにsqliteを利用するように設定しています。PostgreSQLを利用する場合は [Databaseのドキュメント](../database/index.md) を参考にして app-config.local.yamlの設定を書き換えてください。
+なお、初期状態ではデータベースにsqliteを利用するように設定しています。PostgreSQLを利用する場合は [Databaseのドキュメント](../database/index.md) を参考にしてapp-config.local.yamlの設定を書き換えてください。
 
 ```shell
 cd <repository top>
