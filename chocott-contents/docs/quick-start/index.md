@@ -34,7 +34,7 @@ OrganizationのメンバーでBackstageを共有利用する場合は、Organiza
 
 nodeやyarnなどいくつかのコマンドが必要です。詳しくは [Backstage公式ドキュメントのGetting Started](https://backstage.io/docs/getting-started/#prerequisites)をご確認ください。
 
-なお、chocott-backstageではNode 22または24を利用して実装しています。
+なお、chocott-backstageではNode 24を利用して実装しています。
 
 また、TechDocsを表示するためにmkdocsというツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
 
