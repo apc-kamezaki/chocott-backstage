@@ -3276,9 +3276,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-kubernetes-backend@npm:^0.21.8":
-  version: 0.21.8
-  resolution: "@backstage/plugin-kubernetes-backend@npm:0.21.8"
+"@backstage/plugin-kubernetes-backend@npm:^0.21.9":
+  version: 0.21.9
+  resolution: "@backstage/plugin-kubernetes-backend@npm:0.21.9"
   dependencies:
     "@aws-crypto/sha256-js": "npm:^5.0.0"
     "@aws-sdk/credential-providers": "npm:^3.350.0"
@@ -3304,10 +3304,11 @@ __metadata:
     express-promise-router: "npm:^4.1.0"
     fs-extra: "npm:^11.2.0"
     http-proxy-middleware: "npm:^2.0.6"
+    ipaddr.js: "npm:^2.3.0"
     lodash: "npm:^4.17.21"
     luxon: "npm:^3.0.0"
     node-fetch: "npm:^2.7.0"
-  checksum: 10/28da2e320d8395668156e67f9d51b21056770b331f425212482e8549a102df312e8e1971b5936b15c4a77cd1c36ba18c03520784f4f7c9415cb50b0f7273ba61
+  checksum: 10/97c66be7c32f25756b8ab6b6dabb1d3d108358614b3d063fae527bb11c1f08558f0313959c9568f4be9f94bc686289e83251acec8b6d6ea613fdeaf20aa85250
   languageName: node
   linkType: hard
 
@@ -3630,9 +3631,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-scaffolder-backend@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@backstage/plugin-scaffolder-backend@npm:4.0.3"
+"@backstage/plugin-scaffolder-backend@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "@backstage/plugin-scaffolder-backend@npm:4.0.4"
   dependencies:
     "@backstage/backend-openapi-utils": "npm:^0.7.1"
     "@backstage/backend-plugin-api": "npm:^1.10.0"
@@ -3657,7 +3658,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     logform: "npm:^2.3.2"
     luxon: "npm:^3.0.0"
-    nunjitsu: "npm:^0.5.0"
+    nunjitsu: "npm:^0.6.0"
     p-queue: "npm:^6.6.2"
     prom-client: "npm:^15.0.0"
     triple-beam: "npm:^1.4.1"
@@ -3667,7 +3668,7 @@ __metadata:
     zen-observable: "npm:^0.10.0"
     zod: "npm:^3.25.76 || ^4.0.0"
     zod-to-json-schema: "npm:^3.25.1"
-  checksum: 10/87197f6e9e938bd0da87ad109f23c76b843b8e8fa3524c005d783c0c798c97bafa9f81cd0725b1967286dc402eddc6c5db7b18a753892d348ea1acc8ae0dfd2a
+  checksum: 10/32a7c891c31a62f13f98f6334f9e3eb7277593ae0530afc46fb9356372f8856210b049dca6e067f40b65584ed97352d7ee4d2dbfc31ba3cd505ec3d23c416806
   languageName: node
   linkType: hard
 
@@ -13480,7 +13481,7 @@ __metadata:
     "@backstage/plugin-catalog-backend-module-github-org": "npm:^0.3.25"
     "@backstage/plugin-catalog-backend-module-logs": "npm:^0.1.25"
     "@backstage/plugin-catalog-backend-module-scaffolder-entity-model": "npm:^0.2.23"
-    "@backstage/plugin-kubernetes-backend": "npm:^0.21.8"
+    "@backstage/plugin-kubernetes-backend": "npm:^0.21.9"
     "@backstage/plugin-mcp-actions-backend": "npm:^0.2.1"
     "@backstage/plugin-notifications-backend": "npm:^0.6.8"
     "@backstage/plugin-permission-backend": "npm:^0.7.15"
@@ -13488,7 +13489,7 @@ __metadata:
     "@backstage/plugin-permission-common": "npm:^0.9.10"
     "@backstage/plugin-permission-node": "npm:^0.11.3"
     "@backstage/plugin-proxy-backend": "npm:^0.6.16"
-    "@backstage/plugin-scaffolder-backend": "npm:^4.0.3"
+    "@backstage/plugin-scaffolder-backend": "npm:^4.0.4"
     "@backstage/plugin-scaffolder-backend-module-github": "npm:^0.9.12"
     "@backstage/plugin-scaffolder-backend-module-notifications": "npm:^0.1.25"
     "@backstage/plugin-search-backend": "npm:^2.1.6"
@@ -24008,10 +24009,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nunjitsu@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "nunjitsu@npm:0.5.0"
-  checksum: 10/7482355dbb7c8921ce84e1d634bf627dd4704b9f69315660dd98ff0328f91f3e9d295adad04e629c2254de00348720059d7ec306d0edea2af71614473041f9b6
+"nunjitsu@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "nunjitsu@npm:0.6.0"
+  checksum: 10/287347334beac63b4228d07757c392c24d396f5a7a0ad38ef7c771692384976b9a2aa2e64d1fde2d5d0150df4247689467a3b29578746f185bc96ddd5709c8f8
   languageName: node
   linkType: hard
 
